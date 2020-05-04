@@ -30,3 +30,23 @@ func Hitung(b contract.Maju) {
 	fmt.Println("cepat :", b.Cepat())
 	fmt.Println("lambat :", b.Lambat())
 }
+
+func Motors() {
+	Motors := [...]Motor{
+		Motor{2, 2, "Merah", 20},
+		Motor{2, 4, "Hijau", 40},
+		Motor{2, 4, "Biru", 60},
+		Motor{2, 2, "Pink", 60},
+		Motor{2, 2, "Kuning", 20},
+	}
+
+	for index, item := range Motors {
+		fmt.Println("--------------")
+		fmt.Println("Motor ke : ", index+1)
+		fmt.Println("Jumlah Gigi: ", item.Gigi)
+		fmt.Println("Jumlah Ban: ", item.Ban)
+		fmt.Println("Jenis Warna: ", item.Warna)
+		fmt.Println("Waktu Tempuh: ", item.Menit)
+		Hitung(item)
+	}
+}
